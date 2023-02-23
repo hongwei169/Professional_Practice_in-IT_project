@@ -7,7 +7,10 @@ const About = () => {
         <div className="about">
             
             <AboutDetails />
+
+            
         </div>
+        
     );
 }
 

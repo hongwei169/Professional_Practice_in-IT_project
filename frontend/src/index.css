@@ -124,3 +124,9 @@ div.error {
 input.error {
   border: 1px solid var(--error);
 }
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
