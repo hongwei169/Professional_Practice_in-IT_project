@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Navbar from './components/Navbar';
 import About from './pages/About';
 import Edit from './components/EditWorkout';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -16,12 +17,13 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/edit/:id" element={<Edit />} />
-            
-            
           </Routes> 
+          <Footer /> 
         </div>
       </BrowserRouter>
     </div>
+
+
   );
 }
 
