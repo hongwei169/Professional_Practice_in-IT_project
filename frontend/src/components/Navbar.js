@@ -31,7 +31,7 @@ render(){
 
         <>
         <nav>
-        <a href ="/"><img src={atu} width="150" height="100" ></img></a>
+        <a href ="/"><img src={atu} width="200" height="100" ></img></a>
 
             <div id="navbar" className={this.state.clicked ? 
             "#navbar active" : "#navbar"}>
