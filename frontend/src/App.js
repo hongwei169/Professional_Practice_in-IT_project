@@ -1,11 +1,12 @@
 import { BrowserRouter , Routes, Route } from 'react-router-dom';
 
 // Components and Pages
-import Home from './pages/Home';
 import Navbar from './components/Navbar';
 import About from './pages/About';
 import Edit from './components/EditWorkout';
 import Footer from './components/Footer';
+import WorkOut from './pages/Workout';
+
 
 function App() {
   return (
@@ -14,9 +15,10 @@ function App() {
         <Navbar />
         <div className="pages">
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/"  />
             <Route path="/about" element={<About />} />
             <Route path="/edit/:id" element={<Edit />} />
+            <Route path="/workout" element={<WorkOut />} />
           </Routes> 
           <Footer /> 
         </div>

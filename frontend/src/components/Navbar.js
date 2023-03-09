@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import atu from '../images/atu.jpg'
+import atu from '../images/atu.png'
 import "./NavbarStyle.css";
 import React, { Component } from 'react' 
 
@@ -31,15 +31,15 @@ render(){
 
         <>
         <nav>
-        <a href ="index.html"><img src={atu} width="150" height="100" ></img></a>
+        <a href ="/"><img src={atu} width="150" height="100" ></img></a>
 
             <div id="navbar" className={this.state.clicked ? 
             "#navbar active" : "#navbar"}>
                 <ul>
-                    <li><a className="active" href= "index.html">Home Page</a></li>
-                    <li><a href= "index.html">Workout</a></li>
-                    <li><a href= "index.html">Contact</a></li>
-                    <li><a href= "index.html">About</a></li>
+                    <li><a className="active" href= "/">Home Page</a></li>
+                    <li><a href= "workout">Workout</a></li>
+                    <li><a href= "contact">Contact</a></li>
+                    <li><a href= "about">About</a></li>
                 </ul>
             </div>
             <div id = "mobile" onClick={this.handleClick}>
