@@ -36,10 +36,12 @@ render(){
             <div id="navbar" className={this.state.clicked ? 
             "#navbar active" : "#navbar"}>
                 <ul>
-                    <li><a className="active" href= "/">Home Page</a></li>
+                    
+                    <li><a href= "home">Home</a></li>
                     <li><a href= "workout">Workout</a></li>
-                    <li><a href= "contact">Contact</a></li>
+                    <li><a href= "gallery">Gallery</a></li>
                     <li><a href= "about">About</a></li>
+                    
                 </ul>
             </div>
             <div id = "mobile" onClick={this.handleClick}>

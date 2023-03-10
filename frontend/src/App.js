@@ -6,6 +6,7 @@ import About from './pages/About';
 import Edit from './components/EditWorkout';
 import Footer from './components/Footer';
 import WorkOut from './pages/Workout';
+import Home from './pages/Home';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/edit/:id" element={<Edit />} />
             <Route path="/workout" element={<WorkOut />} />
+            <Route path="/home" element={<Home />} />
           </Routes> 
           <Footer /> 
         </div>
