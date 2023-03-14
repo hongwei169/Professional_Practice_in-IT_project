@@ -16,11 +16,10 @@ function App() {
         <Navbar />
         <div className="pages">
           <Routes>
-            <Route path="/"  />
             <Route path="/about" element={<About />} />
             <Route path="/edit/:id" element={<Edit />} />
             <Route path="/workout" element={<WorkOut />} />
-            <Route path="/home" element={<Home />} />
+            <Route path="/" element={<Home />} />
           </Routes> 
           <Footer /> 
         </div>
