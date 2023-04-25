@@ -2,12 +2,16 @@ import { useState } from 'react'
 import { useWorkoutsContext } from "../hooks/useWorkoutsContext";
 import { useParams } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { useAuthContext } from "../hooks/useAuthContext";
+import { set } from 'date-fns';
 
-const Edit = () => {
+const Edit = ({workout}) => {
     let { id } = useParams();
 
     const navigate = useNavigate();
     const { dispatch } = useWorkoutsContext();
+    const { user } = useAuthContext();
 
     const [title, setTitle] = useState('');
     const [load, setLoad] = useState('');
@@ -21,11 +25,13 @@ const Edit = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
+
         const response = await fetch('/api/workouts/' + id, {
             method: 'PATCH',
             body: JSON.stringify({ title, load, reps }),
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${user.token}`
             }
         });
 
@@ -45,8 +51,6 @@ const Edit = () => {
             console.log("Workout edited", data);
             dispatch({ type: 'UPDATE_WORKOUT', payload: data });
         }
-
-        navigate('/');     
     }
 
     return (

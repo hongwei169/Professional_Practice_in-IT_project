@@ -3,14 +3,17 @@ const mongoose = require('mongoose');
 
 // GET all workouts
 const getAllWorkouts = async (req, res) => {
+    const user_id = req.user._id;
+
     // Find all workouts in the database
-    const workouts = await Workout.find({}).sort({ createdAt: -1 });
+    const workouts = await Workout.find({user_id}).sort({ createdAt: -1 });
 
     res.status(200).json(workouts);
 }
 
 // GET single workout
 const getWorkout = async (req, res) => {
+
     // Check if the id is valid
     if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
         return res.status(404).json({ error: 'Workout not found' });
@@ -48,7 +51,8 @@ const createWorkout = async (req, res) => {
 
     // Create a new workout document
     try {
-        const workout = await Workout.create({ title, reps, load })
+        const user_id = req.user._id;
+        const workout = await Workout.create({ title, reps, load , user_id})
         res.status(200).json(workout);
     } catch (err) {
         res.status(400).json({ error: err.message });
@@ -76,6 +80,7 @@ const deleteWorkout = async (req, res) => {
 // UPDATE one workout
 const updateWorkout = async (req, res) => {
     const { title, reps, load } = req.body;
+    
 
     let emptyFields = [];
 
@@ -99,6 +104,7 @@ const updateWorkout = async (req, res) => {
     }
 
     // Find one workout in the database and update it
+    const user_id = req.user._id;
     const workout = await Workout.findOneAndUpdate({ _id: req.params.id }, {...req.body}, {new: true})
 
     if (!workout) {
