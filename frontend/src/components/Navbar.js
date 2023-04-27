@@ -89,14 +89,17 @@ const Navbar = () => {
         </Link>
         {user && (
           <div id = 'navbar' className={state.clicked ? "#navbar active" : "#navbar"}>
-            <span>{user.email}</span>
-            <button onClick={handleClick}>Log out</button>
                 <ul>
                     <li><a href= "/">Home</a></li>
                     <li><a href= "workout">Workout</a></li>
                     <li><a href= "gallery">Gallery</a></li>
                     <li><a href= "about">About</a></li>
+                    <li><span>{user.email}</span>
+                    <button onClick={handleClick}>Log out</button>
+                    </li>
+                    
                 </ul>
+              
           </div>
         )}
         {!user && (

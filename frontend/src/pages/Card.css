@@ -1,0 +1,64 @@
+@media only screen and (min-width: 576px) {
+.card-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+
+  
+  
+}
+}
+
+.card {
+  flex-basis: 100%;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  height: 100%;
+  width: 100%;
+}
+
+.card:last-child {
+  margin-right: 0;
+}
+
+.card-body {
+  padding: 0;
+}
+
+.react-player {
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (min-width: 576px) {
+  .card {
+    flex-basis: calc(50% - 10px);
+    height: 400px;
+    width: 400px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .card {
+    flex-basis: calc(50% - 10px);
+    height: auto;
+    width: auto;
+  }
+
+  .react-player {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .card {
+    flex-basis: calc(33.33% - 10px);
+  }
+}
+
+
+
+

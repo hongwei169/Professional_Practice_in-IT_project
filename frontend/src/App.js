@@ -4,6 +4,7 @@ import { useAuthContext } from './hooks/useAuthContext';
 // Components and Pages
 import Navbar from './components/Navbar';
 import About from './pages/About';
+import Gallery from './pages/Gallery';
 import Edit from './components/EditWorkout';
 import Footer from './components/Footer';
 import WorkOut from './pages/Workout';
@@ -22,6 +23,7 @@ function App() {
         <div className="pages">
           <Routes>
             <Route path="/about" element={ <About /> } />
+            <Route path="/gallery" element={ <Gallery /> } />
             <Route path="/edit/:id" element={ <Edit />} />
             <Route path="/workout" element={<WorkOut />} />
             <Route path="/" element={user ? <Home /> : <Navigate to={"/login"}/>} />

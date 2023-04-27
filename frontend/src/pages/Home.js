@@ -1,5 +1,6 @@
 import React from 'react';
-import gymvideo from '../components/videos/gymvideo.mp4'
+import gymvideo from '../components/videos/gymvideo.mp4';
+import '../index.css';
 
 const Home = () => {
     return (
@@ -13,4 +14,4 @@ const Home = () => {
             </div>
         </div>)}
 
-export default Home
+export default Home;
