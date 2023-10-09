@@ -20,3 +20,4 @@ To run the app locally, you will need:
 4. Start the server: 'nodemon server.js' in the backend file
 5. Start the client: 'npm start' in the frontend file
 6. Open the app in your browser at http://localhost:3000
+[PPIT Documentation .pdf](https://github.com/hongwei169/Professional_Practice_in-IT_project/files/12844671/PPIT.Documentation.pdf)
